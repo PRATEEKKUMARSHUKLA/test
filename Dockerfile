@@ -1,5 +1,7 @@
-# Use the official PHP image with Apache server
 FROM php:8.1-apache
+
+# Set the ServerName to localhost
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Copy the project files to the server root directory
 COPY . /var/www/html/
